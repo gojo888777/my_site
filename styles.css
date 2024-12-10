@@ -1,16 +1,68 @@
 body {
-  background-color: #ffffff; 
+  background-color: #17b88d; 
   font-family: Arial, sans-serif; 
 }
 
 h1 {
   color: rgb(255, 47, 0); 
   text-align: center; 
+ 
 }
 
 p {
   color: rgb(58, 0, 128); 
-  font-size: 20px; 
+  font-size: 20px;
+  font-size: 20px;
+  line-height:1.5;
+  text-align:left; 
+}
+.box {
+  height: 100px;
+  width: 100px;
+  float: left;
+  text-align: center;
+  margin: 5px;
+  padding: 5px; }
+#info_1 {
+  background-color: black;}
+#info_2 {
+  background-color: blue;}
+#info_3 {
+  background-color: aqua;}
+.my-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: blueviolet;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: backgroun-color 0.3s, trunsform 0.1s;
+}
+.my_batton:hover {
+  background-color: #17b88d;
+}
+.my_button:active {
+  background-color: aliceblue;
+  transform: scale(0.95);
 }
 
+.my_button{
+  padding:10px 20px;
+  font-size:16px;
+  color: #17b88d;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s,transform 0.1s;
+}
+.my_button:hover{
+  background-color: #b30009;
+}
+.my_button:active{
+  background-color: #098500;
+  transform:scale(0.95);
+
+}
 
