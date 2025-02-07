@@ -5,9 +5,73 @@
     <meta name="viewport"content="width=device-width,initial-scele=1.0">
     <title>adit car</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .backgroun {
+            background-image: url('images/bmw.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
+    <h2>Хотите посмотреть на спорткары новой колекции?</h2>
+    <img id="slider" src="" alt="Изображение" width="194" height="184">
+    <br>
+    <button class="my_button" onclick="previousImage()">Предыдущие</button>
+    <button class="my_button" onclick="nextImage()">Следующие</button>
+    <script>
+        const images = [
+            'images/m4.jpg',
+            'images/bmw.jpg',
+            'images/ламбо.jpg',
+            'images/giga.jpg',
+            'images/несколько машин.jpg'
+        ];
 
+        let currentIndex = 0;
+        function updateImage() {
+            const slider = document.getElementById('slider');
+            slider.src = images[currentIndex];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+
+            updateImage();
+        }
+
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+
+            updateImage();
+        }
+        updateImage();
+
+    </script>
+    <div class="backgroun">
+        <div>
+            <h1>Добро пожаловать!</h1>
+            <p>это моя машина!</p>
+        </div>
+    </div>
     <a id="start"></a>
    
     <h1>Nise adit</h1>
@@ -54,7 +118,7 @@
     <ul>
         <li>
             <img src="https://avatars.mds.yandex.net/get-autoru-vos/9772983/4ba4659b1551cc1f695e288bf46f2cc6/456x342"
-             alt="bmw m5 f90">
+            alt="bmw m5 f90">
         </li>
     </ul>
 </body>
